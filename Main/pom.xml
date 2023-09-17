@@ -49,12 +49,6 @@
             <artifactId>allure-testng</artifactId>
             <version>2.21.0</version>
         </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-test-filter</artifactId>
-            <version>2.21.0</version>
-            <scope>runtime</scope>
-        </dependency>
 
         <!--либа которыя решает проблему с разными версиями хрома и хромдрайвера-->
         <!--библиотека, которая умеет автоматически скачивать свежий бинарник вебдрайвера для разн.браузеров-->
@@ -96,7 +90,7 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>json-schema-validator</artifactId>
-            <version>5.3.0</version> <!-- или ваша актуальная версия -->
+            <version>5.3.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
