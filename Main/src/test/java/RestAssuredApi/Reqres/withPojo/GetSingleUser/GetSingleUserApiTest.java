@@ -32,7 +32,7 @@ public class GetSingleUserApiTest {
                 .when()
                 .get(USER_ONE)
                 .then().log().all()
-                .body(matchesJsonSchemaInClasspath("response-schema-GetSingleUserApiTest.json"))
+                .body(matchesJsonSchemaInClasspath("response-schema/response-schema-GetSingleUserApiTest.json"))
                 .extract().body().as(GetSingleUser.Root.class);
 
 

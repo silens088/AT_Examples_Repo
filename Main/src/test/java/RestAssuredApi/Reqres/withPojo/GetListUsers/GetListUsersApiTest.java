@@ -39,7 +39,7 @@ public class GetListUsersApiTest {
                 .when()
                 .get(USERS_LIST_PAGE1)
                 .then().log().all()
-                .body(matchesJsonSchemaInClasspath("response-schema-GetListUsersApiTest.json"))
+                .body(matchesJsonSchemaInClasspath("response-schema/response-schema-GetListUsersApiTest.json"))
                 .extract().as(GetListUsers.Root.class);
 
         //Root

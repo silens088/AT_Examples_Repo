@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 public class PostCreateUserTests {
 
@@ -25,6 +26,7 @@ public class PostCreateUserTests {
                 .when()
                 .post(CREATE_USER_API)
                 .then().log().all()
+                .body(matchesJsonSchemaInClasspath("response-schema/response-schema-PostCreateUserTest.json"))
                 .extract().as(PostCreateUserResponse.class);
 
         Assert.assertEquals(request.getName(), response.getName());
